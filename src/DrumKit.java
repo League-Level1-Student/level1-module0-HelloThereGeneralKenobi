@@ -36,7 +36,7 @@ public class DrumKit implements MouseListener {
    	 // 3. Set the size of the frame
    	 owo.setSize(500,500);
    	 // 4. Set the title of the frame
-   	 owo.setTitle("You are mom");
+   	 owo.setTitle("italians bleed marinara sauce");
    	 // 5. Make a JPanel variable and initialize it using "new JPanel().
    	 JPanel uwu = new JPanel();
    	 // 6. Add the panel to the frame. (The panel is invisible.)
@@ -54,19 +54,22 @@ public class DrumKit implements MouseListener {
       	 // 12. call the pack() method on the frame.  Run your program. Do you see your drum image?
    	  owo.pack();
    	 // 13. add this mouse listener to drumLabelWithImage
-    	
+    drumLabelWithImage.addMouseListener(this);
      	 // 18. Add more images to make a drumkit. Remember to add this mouse listener to each one.
 
     }
 
     public void mouseClicked(MouseEvent e) {
    	 // 14. Print "mouse clicked" to the console. Run your program and watch the console to see when this is printed.
+    	System.out.println("mouse clicked");
 
    	 JLabel drumClicked = (JLabel) e.getSource();  // This line gets the label that the mouse clicked on
    	 
    	 // 15. Download a drum sound and drop it into your "default package". You can find it on freesound.org. To download it, log in as leagueofamazing/code4life.
    	 // 16. If they clicked on the drumImage...
-
+   	 if(drumClicked.equals(drumLabelWithImage)) {
+   		 playSound("lukasContainsWide.wav");
+   	 }
    		 // 17. ...use the playSound method to play a drum sound. Test to see if it works
 
  
