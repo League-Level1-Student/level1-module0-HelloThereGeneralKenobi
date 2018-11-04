@@ -13,6 +13,12 @@ import javax.swing.JPanel;
 
 public class SoundEffectsMachine implements ActionListener {
 	
+	JButton button1 = new JButton();
+	JButton button2 = new JButton();
+	JButton button3 = new JButton();
+	JButton button4 = new JButton();
+	JButton button5 = new JButton();
+	
 	public static void main(String[] args) {
 		
 		SoundEffectsMachine s = new SoundEffectsMachine();
@@ -29,7 +35,6 @@ public class SoundEffectsMachine implements ActionListener {
 	     
 	     frame.setSize(700, 700);
 	     
-	     JButton button1 = new JButton();
 	     
 	     JPanel panel = new JPanel();
 	     frame.add(panel);
@@ -39,25 +44,25 @@ public class SoundEffectsMachine implements ActionListener {
 	     button1.setSize(200, 200); 
 	     panel.add(button1);
 	     
-	     JButton button2 = new JButton();
+
 	     button2.addActionListener(this);
 	     button2.setText("Sound2");
 	     button2.setSize(200, 200); 
 	     panel.add(button2);
 	     
-	     JButton button3 = new JButton();
+
 	     button3.addActionListener(this);
 	     button3.setText("Sound3");
 	     button3.setSize(200, 200); 
 	     panel.add(button3);
 	     
-	     JButton button4 = new JButton();
+
 	     button4.addActionListener(this);
 	     button4.setText("Sound4");
 	     button4.setSize(200, 200); 
 	     panel.add(button4);
 	     
-	     JButton button5 = new JButton();
+
 	     button5.addActionListener(this);
 	     button5.setText("Sound5");
 	     button5.setSize(200, 200); 
@@ -72,7 +77,23 @@ public class SoundEffectsMachine implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-
+		JButton buttonPressed = (JButton) e.getSource();
+		
+		if(buttonPressed == (button1)) {
+			playSound("LowD2.wav");
+		}
+		if(buttonPressed == (button2)) {
+			playSound("HighD.wav");
+		}
+		if(buttonPressed == (button3)) {
+			playSound("A2.wav");
+		}
+		if(buttonPressed == (button4)) {
+			playSound("G2Sharp.wav");
+		}
+		if(buttonPressed == (button5)) {
+			playSound("G2.wav");
+		}
 		}
 	}
 
